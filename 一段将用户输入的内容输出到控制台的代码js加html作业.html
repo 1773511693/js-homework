@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <title>作业</title>
+<head>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("必须填写内容！");
+    return false;
+  }
+  if (x !="")
+  {console.log(x);
+  return false;
+}
+}
+</head>
+<body>
+    <h1>作业</h1>
+<h1>将用户的内容输出到控制台</h1>
+<h4>你在内容输入框输入内容点提交控制台就可以看到！</h4>
+<form name="myForm" action="/demo/action_page.php" onsubmit="return validateForm()" method="post">
+  内容：<input type="text" name="fname">
+  <input type="submit" value="提交">
+</form>
+</body>
+</html>
