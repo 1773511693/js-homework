@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>作业</title>
+<head>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("必须填写半径！");
+    return false;
+  }
+  if (x !="")
+  {
+      var a = 2*3.14*x;
+      var b = 3.14*x**2;
+      alert("圆的半径为："+x+'\n'+"周长为:"+a+'\n'+"面积为:"+b);
+  return false;
+}
+}</script>
+</head>
+<body>
+    <h1>作业</h1>
+<h1>计算圆的半径与周长与面积</h1>
+<h4>你在半径输入框输入圆的半径即可计算！</h4>
+<form name="myForm" action="/demo/action_page.php" onsubmit="return validateForm()" method="post">
+  半径：<input type="text" name="fname">
+  <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
